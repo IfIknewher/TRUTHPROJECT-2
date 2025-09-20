@@ -1,0 +1,113 @@
+name: "Document Update"
+description: "Report document changes and updates for TRUTHPROJECT"
+title: "[DOC-UPDATE] "
+labels: ["documentation", "update"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Document Update Notification
+        Use this template to report and track document changes within TRUTHPROJECT.
+        
+  - type: input
+    id: document-name
+    attributes:
+      label: "Document Name"
+      description: "Name or path of the document that was updated"
+      placeholder: "e.g., README.md, docs/setup-guide.md"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: update-type
+    attributes:
+      label: "Update Type"
+      description: "Select the type of document update"
+      options:
+        - "Content Addition"
+        - "Content Modification"
+        - "Content Removal"
+        - "Structure Change"
+        - "Formatting Update"
+        - "Error Correction"
+        - "Translation"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Update Severity"
+      description: "How significant is this document change?"
+      options:
+        - "Critical - Major content changes"
+        - "Important - Notable updates"
+        - "Minor - Small corrections or additions"
+        - "Trivial - Formatting or typo fixes"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: change-summary
+    attributes:
+      label: "Change Summary"
+      description: "Provide a clear summary of what was changed in the document"
+      placeholder: "Describe the changes made, sections affected, and rationale..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: affected-sections
+    attributes:
+      label: "Affected Sections"
+      description: "List the specific sections, pages, or areas that were modified"
+      placeholder: "- Section 1: Introduction\n- Section 3.2: Configuration steps\n- Appendix A: Troubleshooting"
+    validations:
+      required: false
+      
+  - type: input
+    id: version-info
+    attributes:
+      label: "Version Information"
+      description: "Document version number or identifier if applicable"
+      placeholder: "e.g., v2.1, Rev 5, 2025-09-21"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: impact-assessment
+    attributes:
+      label: "Impact Assessment"
+      description: "Assess how this change affects other documents, processes, or workflows"
+      placeholder: "Describe any dependencies or related documents that may need updates..."
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: review-status
+    attributes:
+      label: "Review Status"
+      description: "Has this document update been reviewed?"
+      options:
+        - "Pending Review"
+        - "Under Review"
+        - "Approved"
+        - "Needs Revision"
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: update-checklist
+    attributes:
+      label: "Document Update Checklist"
+      description: "Confirm documentation update requirements"
+      options:
+        - label: "Content is accurate and up-to-date"
+          required: true
+        - label: "Changes are clearly documented and explained"
+          required: true
+        - label: "Related documents have been checked for consistency"
+          required: false
+        - label: "Update follows TRUTHPROJECT documentation standards"
+          required: true
