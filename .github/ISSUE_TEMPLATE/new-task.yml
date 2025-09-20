@@ -1,0 +1,96 @@
+name: "New Task"
+description: "Create a new task for TRUTHPROJECT"
+title: "[TASK] "
+labels: ["task", "pending"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## New Task Request
+        Please provide detailed information about the new task to be added to TRUTHPROJECT.
+        
+  - type: input
+    id: task-title
+    attributes:
+      label: "Task Title"
+      description: "Brief descriptive title for the task"
+      placeholder: "e.g., Implement data validation system"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority Level"
+      description: "Select the priority level for this task"
+      options:
+        - "High"
+        - "Medium"
+        - "Low"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: "Task Category"
+      description: "Select the category that best describes this task"
+      options:
+        - "Development"
+        - "Documentation"
+        - "Testing"
+        - "Research"
+        - "Maintenance"
+        - "Analysis"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: "Task Description"
+      description: "Provide a detailed description of what needs to be accomplished"
+      placeholder: "Describe the task requirements, objectives, and any specific details..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Define the criteria that must be met for this task to be considered complete"
+      placeholder: "- [ ] Criterion 1\n- [ ] Criterion 2\n- [ ] Criterion 3"
+    validations:
+      required: false
+      
+  - type: input
+    id: estimated-time
+    attributes:
+      label: "Estimated Time"
+      description: "Approximate time needed to complete this task"
+      placeholder: "e.g., 2 hours, 1 day, 1 week"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependencies"
+      description: "List any dependencies or prerequisites for this task"
+      placeholder: "List other tasks, resources, or requirements that must be completed first..."
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: task-checklist
+    attributes:
+      label: "Task Setup Checklist"
+      description: "Confirm task setup requirements"
+      options:
+        - label: "I have reviewed existing tasks to avoid duplication"
+          required: true
+        - label: "I have provided sufficient detail for task completion"
+          required: true
+        - label: "I understand this task aligns with TRUTHPROJECT objectives"
+          required: true
