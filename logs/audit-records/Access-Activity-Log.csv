@@ -1,0 +1,11 @@
+Timestamp,User_ID,Username,Action_Type,Resource_Accessed,IP_Address,User_Agent,Session_ID,Status,Details,Duration,Location
+2025-09-21T02:59:00Z,USR001,admin,LOGIN,/dashboard,192.168.1.100,Mozilla/5.0,SES001,SUCCESS,User login successful,00:00:15,Sydney_AU
+2025-09-21T03:00:00Z,USR001,admin,ACCESS,/logs/audit-records,192.168.1.100,Mozilla/5.0,SES001,SUCCESS,Accessed audit records directory,00:00:30,Sydney_AU
+2025-09-21T03:01:00Z,USR002,operator,LOGIN,/dashboard,192.168.1.105,Chrome/119.0,SES002,FAILED,Invalid credentials,00:00:05,Melbourne_AU
+2025-09-21T03:02:00Z,USR001,admin,CREATE,/logs/audit-records/Access-Activity-Log.csv,192.168.1.100,Mozilla/5.0,SES001,SUCCESS,Created audit log template,00:02:30,Sydney_AU
+2025-09-21T03:05:00Z,USR003,analyst,LOGIN,/dashboard,192.168.1.110,Firefox/120.0,SES003,SUCCESS,User login successful,00:00:12,Brisbane_AU
+2025-09-21T03:06:00Z,USR003,analyst,ACCESS,/docs,192.168.1.110,Firefox/120.0,SES003,SUCCESS,Accessed documentation,00:01:45,Brisbane_AU
+2025-09-21T03:08:00Z,USR001,admin,UPDATE,/automation/workflows,192.168.1.100,Mozilla/5.0,SES001,SUCCESS,Updated automation workflow,00:03:20,Sydney_AU
+2025-09-21T03:10:00Z,USR002,operator,LOGIN,/dashboard,192.168.1.105,Chrome/119.0,SES004,SUCCESS,User login successful,00:00:18,Melbourne_AU
+2025-09-21T03:12:00Z,USR004,guest,ACCESS,/readme,192.168.1.115,Safari/17.0,SES005,SUCCESS,Accessed project readme,00:00:45,Perth_AU
+2025-09-21T03:15:00Z,USR001,admin,LOGOUT,/dashboard,192.168.1.100,Mozilla/5.0,SES001,SUCCESS,User logout successful,00:00:03,Sydney_AU
